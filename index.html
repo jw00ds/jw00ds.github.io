@@ -14,37 +14,96 @@
     <link rel="stylesheet" href="style.css" class="css" />
   </head>
   <body class="bg-secondary">
-    <div class="container m-3 col-md-12 d-flex justify-content-center">
-      <div class="row m-4 d-flex justify-content-center">
-          <div class="col-md-12 justify-content-center">
-              <h1 class="text-center font-weight-bold">Welcome to John Woods' Personal Site</h1>
-              <a href="https://github.com/jw00ds">GitHub Profile</a>
-              <br />
-              <br />
-          </div>
-          <div class="col-md-8 justify-content-center">
-              <h3 class="text-center font-weight-bold">Summary / About Me</h3>
-              <p class="text-justify">
-                  Born in Texas, grew up in Winston-Salem, NC. I graduated from Samford University in 2012 after which I've worked business-analyst roles and really enjoyed what I've learned. In every job I've had, I've found myself ending up spending well over 50% of my time building spreadsheets - it's the way I've been able to create the most value regardless of my role, and it's what I've enjoyed the most. In September, I decided to try to take the next step in my enjoyment of designing and building tools / organizing data, by doing a web-development bootcamp. I've really enjoyed everything I've been learning, and want to code for the rest of my life.
-              </p>
-              <br />
-          </div>
-      <div class="row my-2 d-flex align-items-top justify-content-center">
-        <div class="col-md-4 m-2 p-2 justify-content-center">
-          <h3 class="font-weight-bold">I love mountain biking</h3>
+    <a id="gh" class="text-center" href="https://github.com/jw00ds"
+      >GitHub Profile</a
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 justify-content-center mx-2">
+          <h1 id="header" class="text-center font-weight-bold my-1">
+            Welcome to John Woods' Personal Site
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mx-1 justify-content-center">
+          <h3 class="font-weight-bold my-4 px-2">Summary / About Me</h3>
+          <p class="text-justify text-light px-2">
+            Born in Texas, grew up in Winston-Salem, NC. I graduated from
+            Samford University in 2012 after which I've worked business-analyst
+            roles and really enjoyed what I've learned. In every job I've had,
+            I've found myself ending up spending well over 50% of my time
+            building spreadsheets - it's the way I've been able to create the
+            most value regardless of my role, and it's what I've enjoyed the
+            most. In September, I decided to try to take the next step in my
+            enjoyment of designing and building tools / organizing data, by
+            doing a web-development bootcamp. I've really enjoyed everything
+            I've been learning, and want to code for the rest of my life.
+          </p>
           <br />
-          <iframe
-            height="454"
-            width="300"
-            frameborder="0"
-            allowtransparency="true"
-            style="background-color: transparent"
-            scrolling="no"
-            src="https://www.strava.com/athletes/10455179/latest-rides/1aef29d7c696e074e7fe90dc1b0ba8691ffa266f"
-          ></iframe>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 justify-content-center">
+          <h3 id="header" class="font-weight-bold">More about me...</h3>
           <br />
-
-          <p>
+          <div class="row justify-content-center">
+            <div class="col">
+              <div
+                class="LI-profile-badge"
+                data-version="v1"
+                data-size="medium"
+                data-locale="en_US"
+                data-type="horizontal"
+                data-theme="dark"
+                data-vanity="woodsjohnc"
+              >
+                <a
+                  class="LI-simple-link"
+                  href="https://www.linkedin.com/in/woodsjohnc?trk=profile-badge"
+                  >John Woods</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+        </div>
+        <div class="col-md-4 justify-content-center">
+          <h3 id="header" class="font-weight-bold">What I've been reading</h3>
+          <br />
+          <p class="text-justify px-2 text-light">
+            I really enjoy reading articles on the web about a lot of topics.
+            Above is my user page from a site a friend of mine made as he taught
+            himself to code via Udemy. It's intended to allow users to track
+            what they've been reading so they can reflect back on what they've
+            been learning, and so the users can see what each other read. It's
+            called breads as a play on the words "B"undy (my friend Austin's
+            last name) + "reads" We talked through the concept a lot and I've
+            learned a ton just discussing the site/app with him as he's built it
+            throughout this year.
+          </p>
+          <a id="breads" href="https://www.breads.io/21"
+            >My profile on breads.io</a
+          >
+        </div>
+        <div class="col-md-4 justify-content-center">
+          <h3 id="header" class="font-weight-bold">What I do for fun</h3>
+          <br />
+          <div class="row justify-content-center">
+            <div class="col ml-2">
+              <iframe
+                height="454"
+                width="335"
+                frameborder="0"
+                allowtransparency="true"
+                style="background-color: transparent"
+                scrolling="no"
+                src="https://www.strava.com/athletes/10455179/latest-rides/1aef29d7c696e074e7fe90dc1b0ba8691ffa266f"
+              ></iframe>
+            </div>
+          </div>
+          <br />
+          <!-- <p>
             I also love keyboard shortcuts. Here are some of my favorites from
             Microsoft:
           </p>
@@ -58,7 +117,7 @@
           <span></span>
           <span></span>
           <span></span>
-          <p class="text-justify">
+          <p class="text-justify text-light">
             I've really enjoyed using VS Code as an IDE, because a lot of my
             keyboard shortcuts transfer well. Here are some of my favorite VS
             Code extensions:
@@ -83,30 +142,17 @@
             PLACEHOLDER - add link to / imbed YouTube walthru vid of some of my
             spreadsheet models (talk ab how those got me interested in
             programming)
-          </p>
-        </div>
-        <div class="col-md-4 justify-content-center">
-          <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="woodsjohnc"><a class="LI-simple-link" href='https://www.linkedin.com/in/woodsjohnc?trk=profile-badge'>John Woods</a></div>
-          <a href="https://www.breads.io/21">What I've been reading lately</a>
-          <br />
-          <br />
-          <p class="text-justify">
-            I really enjoy reading articles on the web about a lot of topics.
-            Above is my user page from a site a friend of mine made as he taught
-            himself to code via Udemy. It's intended to allow users to track
-            what they've been reading so they can reflect back on what they've
-            been learning, and so the users can see what each other read. It's
-            called breads as a play on the words "B"undy (my friend Austin's
-            last name) + "reads" We talked through the concept a lot and I've
-            learned a ton just discussing the site/app with him as he's built it
-            throughout this year.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
-
     <!-- JS dependencies -->
     <script src="app.js"></script>
-    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <script
+      type="text/javascript"
+      src="https://platform.linkedin.com/badges/js/profile.js"
+      async
+      defer
+    ></script>
   </body>
 </html>
