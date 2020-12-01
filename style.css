@@ -1,6 +1,13 @@
-#header {
+#mainheader {
   color: white;
   background-color: #303336;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#header {
+  color: white;
+  background-color: #49545f;
   padding: 20px;
   border-radius: 5px;
 }
@@ -8,14 +15,14 @@
 #gh {
   justify-self: fled-end;
   background-color: #72548f;
-  margin: 4px;
+  margin: 8px .1px;
   color: white;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   border-radius: 5px;
-  position: fixed;
+  /* position: fixed; */
   /* top: 0;
   z-index: 100; */
 }
