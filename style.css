@@ -8,11 +8,12 @@
 #header {
   color: white;
   background-color: #49545f;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
 }
 
 #gh {
+  font-weight: bold;
   justify-self: fled-end;
   background-color: #72548f;
   margin: 8px 0.1px;
@@ -21,18 +22,37 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 3px;
   /* position: fixed; */
   /* top: 0;
   z-index: 100; */
 }
 
 #breads {
+  font-weight: bold;
   background-color: #03dac6;
   color: white;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 3px;
+}
+
+.shortcuts {
+  color: white;
+}
+
+.shortcut-header {
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+}
+
+#bold-underline {
+  font-weight: bold;
+}
+
+#sk-txt {
+  color: orange;
 }
