@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- *Add JS script to map cards from Breads API (display latest readings) -->
+  <!-- *Complete coordination of LinkedIn 3p card w/ LinkedIn tech support -->
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,8 +31,8 @@
           <p id="smry" class="text-justify text-light px-2 pr-1">
             Born in Texas, grew up in Winston-Salem, NC. I graduated from
             Samford University in 2012 after which I've worked business-analyst
-            roles and really enjoyed what I've learned. In every job I've had,
-            I've found myself ending up spending well over 50% of my time
+            roles and really enjoyed what I've learned, but in every job I've
+            had, I've found myself ending up spending well over 50% of my time
             building spreadsheets - it's the way I've been able to create the
             most value regardless of my role, and it's what I've enjoyed the
             most. In September, I decided to try to take the next step in my
@@ -76,6 +79,7 @@
             What I've been reading
           </h3>
           <br />
+          <!-- INSERT JS MAPPING OF BREADS CARDS HERE ONCE GET API ACCESS FROM AUSTIN -->
           <p class="text-justify px-2 text-light">
             I enjoy reading articles on the web about a lot of topics. Below is
             my user page from a site a friend of mine made as he's learned how
@@ -115,9 +119,270 @@
           <br />
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12 justify-content-center">
+          <h1 id="header" class="text-center font-weight-bold">Shortcuts</h1>
+          <!-- <div class="p-2" markdown="1"> -->
+          <div class="p-2">
+            <p id="sk-txt">
+              I really enjoy learning and using keyboard shortcuts
+            </p>
+            <p id="sk-txt">Here are some of my favorites that I use often:</p>
+            <div class="shortcut-header">General Shortcuts</div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>arrow key</kbd> jump between adjacent blocks
+              of text/content/cells
+            </div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>arrow key</kbd> jump between
+              adjacent blocks of text/content/cells, highlighting as you go
+            </div>
+            <div><kbd>tab</kbd> move to next option/input</div>
+            <div>
+              <kbd>shift</kbd>+<kbd>tab</kbd> move to previous option/input
+            </div>
+            <div><kbd>alt</kbd>+<kbd>tab</kbd> toggle active window</div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>Z</kbd> / <kbd>ctrl</kbd>+<kbd>Y</kbd> the
+              classics...
+            </div>
+            <div>
+              <kbd>Win</kbd>+<kbd>arrows</kbd> split screen windows / move
+              selected window
+            </div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>pg up</kbd>/<kbd>pg dn</kbd> cycle between
+              open tabs (I use this most in Excel & Chrome)
+            </div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>W</kbd> close window/tab/sheet of program
+            </div>
+            <div><kbd>ctrl</kbd>+<kbd>5</kbd> format text strikethrough</div>
+            <div>
+              <kbd>shift</kbd>+<kbd>Win</kbd>+<kbd>S</kbd> to begin
+              snip/screengrab
+            </div>
+            <div><kbd>ctrl</kbd>+<kbd>P</kbd> print options</div>
+            <div><kbd>ctrl</kbd>+<kbd>F</kbd> find text</div>
+            <div><kbd>ctrl</kbd>+<kbd>H</kbd> find/replace dialog box</div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>home</kbd> jump cursor to beginning of text
+            </div>
+            <br />
+            <div class="shortcut-header">Excel / Google Sheets</div>
+            <div><kbd>ctrl</kbd>+<kbd>spacebar</kbd> select column</div>
+            <div>
+              <kbd>shift</kbd>+<kbd>spacebar</kbd>
+              select row
+            </div>
+            <div>
+              <kbd>alt</kbd> <kbd>A</kbd> <kbd>G</kbd> <kbd>G</kbd> group
+              columns or rows
+            </div>
+            <div><kbd>ctrl</kbd>+<kbd>1</kbd> general options</div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>D</kbd> fill down into selected cells/next
+            </div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>R</kbd> fill down into selected cells/next
+            </div>
+            <div>
+              <kbd>alt</kbd> <kbd>A</kbd> <kbd>M</kbd> remove duplicates
+            </div>
+            <div>
+              <kbd>alt</kbd> <kbd>E</kbd> <kbd>S</kbd> paste special dialog
+              options (usually I use this to navigate to transpose options)
+            </div>
+            <div>
+              <kbd>alt</kbd> <kbd>E</kbd> <kbd>S</kbd> <kbd>V</kbd> paste values
+            </div>
+            <div>
+              <kbd>alt</kbd> <kbd>E</kbd> <kbd>S</kbd> <kbd>F</kbd> paste
+              formulas
+            </div>
+            <div>
+              <kbd>alt</kbd> <kbd>E</kbd> <kbd>S</kbd> <kbd>T</kbd> paste format
+            </div>
+            <div>
+              <kbd>F4</kbd> toggle formula cell-anchoring when cursor is within
+              / next to a cell reference
+            </div>
+            <div><kbd>alt</kbd> <kbd>F</kbd> <kbd>A</kbd> save as</div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>shift</kbd> <kbd>+</kbd> [when a row or
+              column is infinitely selected] insert row or col
+            </div>
+            <div>
+              <kbd>ctrl</kbd> + <kbd>-</kbd> [when a row or column is infinitely
+              selected] delete row or col
+            </div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>-</kbd> remove formatting
+            </div>
+            <div>
+              <kbd>alt</kbd> <kbd>H</kbd> <kbd>O</kbd> <kbd>R</kbd> rename
+              sheet/tab
+            </div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>L</kbd> filter selected
+            </div>
+            <div>
+              <kbd>alt</kbd> <kbd>O</kbd> <kbd>C</kbd> <kbd>W</kbd> set column
+              width in pixels
+            </div>
+            <div>
+              <kbd>alt</kbd> <kbd>H</kbd> <kbd>O</kbd> <kbd>H</kbd> set row
+              height in pixels
+            </div>
+            <div>
+              <kbd>alt</kbd> <kbd>H</kbd> <kbd>O</kbd> <kbd>I</kbd> autofit
+              column width
+            </div>
+            <div><kbd>ctrl</kbd>+<kbd>~</kbd> show all formulas</div>
+            <div>
+              <kbd>shift</kbd>+<kbd>F11</kbd>
+              insert new sheet in workbook
+            </div>
+            <div>
+              <kbd>ctrl</kbd> + <kbd>[</kbd> jump to formula's immediate
+              precedent
+            </div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>{</kbd> jump to all formula's precedents
+            </div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>]</kbd> jump to formula's immediate dependent
+            </div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>}</kbd> jump to all formula dependents
+            </div>
+            <br />
+            <div class="shortcut-header">Outlook</div>
+            <div><kbd>ctrl</kbd>+<kbd>N</kbd> new email</div>
+            <div><kbd>ctrl</kbd>+<kbd>R</kbd> reply</div>
+            <div><kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>R</kbd> reply all</div>
+            <div><kbd>ctrl</kbd>+<kbd>F</kbd> forward</div>
+            <div><kbd>ctrl</kbd>+<kbd>enter</kbd> send</div>
+            <br />
+            <div class="shortcut-header">VS Code</div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>/</kbd> to toggle a line as commented
+            </div>
+            <div>
+              <kbd>alt</kbd>+<kbd>up/down arrows</kbd> move selected line
+              up/down
+            </div>
+            <div><kbd>ctrl</kbd>+<kbd>L</kbd> highlight line</div>
+            <div><kbd>shift</kbd>+<kbd>alt</kbd>+<kbd>F</kbd> format</div>
+            <div>
+              <kbd>alt</kbd>+<kbd>_click_</kbd> create/place multiple cursors
+            </div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>D</kbd> highlight and modify subsequent
+              instance(s) of selection
+            </div>
+            <div><kbd>ctrl</kbd>+<kbd>K</kbd>+<kbd>O</kbd> open workbook</div>
+            <div><kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>+</kbd> zoom in</div>
+            <div><kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>-</kbd> zoom out</div>
+            <div><kbd>ctrl</kbd>+<kbd>B</kbd> toggle sidebar</div>
+            <div>
+              <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>F</kbd> search in all files
+            </div>
+            <div>
+              <kbd>shift</kbd>+<kbd>alt</kbd>+<kbd>down arrow</kbd> copy/fill
+              down to next line(s)
+            </div>
+            <br />
+            <div class="shortcut-header">
+              Not shortcuts, but my favorite VS Code extensions I've found /
+              been using so far
+            </div>
+            <div id="bold-underline" class="mt-3">Bracket assistance</div>
+            <div>
+              These 2 extensions really help me quickly visually determine which
+              brackets I'm dealing with / what block I'm in (something I really
+              struggled with early on...wish I’d found these sooner)
+            </div>
+            <div>
+              -
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=Durzn.brackethighlighter"
+                >Bracket Highlighter</a
+              >
+              <br />
+              -
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2"
+                >Bracket Pair Colorizer</a
+              >
+              <br />
+            </div>
+            <div id="bold-underline" class="mt-3">CSS color visualization</div>
+            <div>
+              A little larger visual representation than just the default
+              helpful little square in that pops up in CSS files next to color
+              codes
+            </div>
+            <div>
+              -
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize"
+                >Colorize</a
+              >
+              <br />
+            </div>
+            <div id="bold-underline" class="mt-3">
+              Helpful visuals for file/folder types
+            </div>
+            <div>
+              -
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=helgardrichard.helium-icon-theme"
+                >Helium Icon Theme</a
+              >
+              <br />
+            </div>
+            <div id="bold-underline" class="mt-3">
+              Super helpful Git info right there within the IDE
+            </div>
+            <div>
+              I’ve found these especially useful while working collaboratively
+            </div>
+            <div>
+              -
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory"
+                >Git History</a
+              >
+              <br />
+              -
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens"
+                >GitLens</a
+              >
+              <br />
+            </div>
+            <div id="bold-underline" class="mt-3">Spellcheck assistance</div>
+            <div>
+              Can be annoying, but overall I find it helpful for catching things
+              I may overlook that I actually want to be spelled correctly in
+              plain English
+            </div>
+            <div>
+              -
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker"
+                >Code Spell Checker</a
+              >
+            </div>
+          </div>
+          <!-- <object data="README.html" type="text/html"></object> -->
+        </div>
+      </div>
     </div>
     <!-- JS dependencies -->
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
+    <!-- <script src="generateReadMe.js"></script> -->
     <script
       type="text/javascript"
       src="https://platform.linkedin.com/badges/js/profile.js"
@@ -127,43 +392,10 @@
   </body>
 </html>
 
-<!-- <p>
-    I also love keyboard shortcuts. Here are some of my favorites from
-    Microsoft:
-  </p>
-  <span>CTRL arrows</span>
-  <span>Alt Tab</span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <p class="text-justify text-light">
-    I've really enjoyed using VS Code as an IDE, because a lot of my
-    keyboard shortcuts transfer well. Here are some of my favorite VS
-    Code extensions:
-  </p>
-  <span>Bracket Colorizer -- add link</span>
-  <span>Helium Icons -- add link</span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <p>
-    Some of the VS Code keyboard shortcuts I've been using that've been
-    helpful:
-  </p>
-  <span>Alt + arrow keys to move lines of code up and down</span>
-  <span></span>
+<!--
   <p>
     PLACEHOLDER - add link to / imbed YouTube walthru vid of some of my
     spreadsheet models (talk ab how those got me interested in
     programming)
-  </p> -->
+  </p>
+-->
