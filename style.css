@@ -57,6 +57,12 @@
   color: orange;
 }
 
+.vs-header {
+  color: orange;
+  font-weight: bold;
+}
+
 #vs-link {
   color: darkblue;
+  font-weight: bold;
 }
