@@ -43,11 +43,10 @@ const createCard = reading => {
 const displayReadings = async () => {
     const readings = await fetchReadings();
     const latestFiveReadings = readings.slice(0, 4);
-    console.log(latestFiveReadings);
     const readingCards = latestFiveReadings.map(reading => {
         return createCard(reading);
     });
     return readingCards;
 };
 
-window.addEventListener('DOMContentLoaded', displayReadings);
+// window.addEventListener('DOMContentLoaded', displayReadings);
