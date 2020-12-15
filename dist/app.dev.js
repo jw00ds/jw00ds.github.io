@@ -41,18 +41,15 @@ var displayReadings = function displayReadings() {
         case 2:
           readings = _context2.sent;
           latestFiveReadings = readings.slice(0, 4);
-          console.log(latestFiveReadings);
           readingCards = latestFiveReadings.map(function (reading) {
             return createCard(reading);
           });
           return _context2.abrupt("return", readingCards);
 
-        case 7:
+        case 6:
         case "end":
           return _context2.stop();
       }
     }
   });
-};
-
-window.addEventListener('DOMContentLoaded', displayReadings);
+}; // window.addEventListener('DOMContentLoaded', displayReadings);
