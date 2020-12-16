@@ -23,7 +23,7 @@ function fetchReadings() {
 
         case 7:
           responseBody = _context.sent;
-          console.log(responseBody);
+          console.log(response);
           return _context.abrupt("return", responseBody);
 
         case 12:
@@ -43,10 +43,46 @@ function fetchReadings() {
 }
 
 var createCard = function createCard(reading) {
-  var articleImage = document.createElement('img').setAttribute('class', 'thumbnail');
-  var articleLink = document.createElement('a').setAttribute('class', 'btn btn-link');
-  var articleLinkText = document.createTextNode('Link to article');
-  document.getElementById('breads').appendChild(document.createElement('li').appendChild(document.createElement('main').setAttribute('class', 'container').appendChild(document.createElement('section').setAttribute('class', 'row justify-content-center mt-3').appendChild(document.createElement('div').setAttribute('class', 'col-12').appendChild(document.createElement('div').setAttribute('class', 'card shadow-lg').appendChild(document.createElement('div').setAttribute('class', 'card-body').appendChild(document.createElement('h2').setAttribute('class', 'card-title').appendChild(reading.title), articleImage.setAttribute('src', reading.reading_image), document.createElement('p').setAttribute('class', 'card-text text').appendChild(reading.description), document.createElement('p').setAttribute('class', 'card-text text-muted').appendChild(reading.created_at), document.createElement('div').setAttribute('class', 'd-flex justify-content-end').appendChild(articleLink.setAttribute('href', reading.url).appendChild(articleLinkText)))))))));
+  var linkText = document.createTextNode('Link to article');
+  var receiverContainer = document.getElementById('breads');
+  var listItem = document.createElement('li');
+  var main = document.createElement('main');
+  var section = document.createElement('section');
+  var div1 = document.createElement('div');
+  var div2 = document.createElement('div');
+  var div3 = document.createElement('div');
+  var h2 = document.createElement('h2');
+  var image = document.createElement('img');
+  var p1 = document.createElement('p');
+  var p2 = document.createElement('p');
+  var div4 = document.createElement('div');
+  var link = document.createElement('a');
+  var mainWithAttr = main.setAttribute('class', 'container');
+  var sectionWithAttr = section.setAttribute('class', 'row justify-content-center mt-3');
+  var div1WithAttr = div1.setAttribute('class', 'col-12');
+  var div2WithAttr = div2.setAttribute('class', 'card shadow-lg');
+  var div3WithAttr = div3.setAttribute('class', 'card-body');
+  var h2WithAttr = h2.setAttribute('class', 'card-title');
+  var imageWithAttr1 = image.setAttribute('class', 'thumbnail');
+  var imageWithAttr2 = imageWithAttr1.setAttribute('src', reading.reading_image);
+  var p1WithAttr = p1.setAttribute('class', 'card-text text');
+  var p2WithAttr = p2.setAttribute('class', 'card-text text-muted');
+  var div4WithAttr = div4.setAttribute('class', 'd-flex justify-content-end');
+  var linkWithAttr1 = link.setAttribute('class', 'btn btn-link');
+  var linkWithAttr2 = linkWithAttr1.setAttribute('href', reading.url);
+  var finishedLink = linkWithAttr2.appendChild(linkText);
+  var finishedDiv4 = div4WithAttr.appendChild(finishedLink);
+  var finishedP2 = p2WithAttr.appendChild(reading.created_at);
+  var finishedP1 = p1WithAttr.appendChild(reading.description);
+  var finishedH2 = h2WithAttr.appendChild(reading.title);
+  var finishedDiv3 = div3WithAttr.appendChild(finishedH2, imageWithAttr2, finishedP1, finishedP2, finishedDiv4);
+  var finishedDiv2 = div2WithAttr.appendChild(finishedDiv3);
+  var finishedDiv1 = div1WithAttr.appendChild(finishedDiv2);
+  var finishedSection = sectionWithAttr.appendChild(finishedDiv1);
+  var finishedMain = mainWithAttr.appendChild(finishedSection);
+  var finishedListItem = listItem.appendChild(finishedMain);
+  var finishedReceiverContainer = receiverContainer.appendChild(finishedListItem);
+  return finishedReceiverContainer;
 };
 
 var displayReadings = function displayReadings() {
