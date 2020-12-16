@@ -1,28 +1,45 @@
 "use strict";
 
 function fetchReadings() {
+  var response, responseBody;
   return regeneratorRuntime.async(function fetchReadings$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          _context.next = 2;
+          _context.prev = 0;
+          _context.next = 3;
           return regeneratorRuntime.awrap(fetch('https://breads-server.herokuapp.com/api/readings/21', {
             method: 'GET',
             headers: {
               'Access-Control-Request-Headers': 'authorization'
             }
-          }).then(function (results) {
-            return results.json();
-          })["catch"](function (err) {
-            return console.log(err, err.status, err.message);
           }));
 
-        case 2:
+        case 3:
+          response = _context.sent;
+          console.log(response);
+          _context.next = 7;
+          return regeneratorRuntime.awrap(response.json());
+
+        case 7:
+          responseBody = _context.sent;
+          console.log(responseBody);
+          return _context.abrupt("return", responseBody);
+
+        case 12:
+          _context.prev = 12;
+          _context.t0 = _context["catch"](0);
+          console.log(_context.t0, _context.t0.message);
+
+        case 15:
+          ;
+
+        case 16:
         case "end":
           return _context.stop();
       }
     }
-  });
+  }, null, null, [[0, 12]]);
 }
 
 var createCard = function createCard(reading) {
