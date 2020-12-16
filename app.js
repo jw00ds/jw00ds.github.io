@@ -52,4 +52,4 @@ const displayReadings = async () => {
     return readingCards;
 };
 
-// window.addEventListener('DOMContentLoaded', displayReadings);
+window.addEventListener('DOMContentLoaded', displayReadings);

@@ -55,4 +55,6 @@ var displayReadings = function displayReadings() {
       }
     }
   });
-}; // window.addEventListener('DOMContentLoaded', displayReadings);
+};
+
+window.addEventListener('DOMContentLoaded', displayReadings);
