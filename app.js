@@ -45,6 +45,7 @@ const createCard = reading => {
 
 const displayReadings = async () => {
     const readings = await fetchReadings();
+    console.log(readings);
     const latestFiveReadings = readings.slice(0, 4);
     const readingCards = latestFiveReadings.map(reading => {
         return createCard(reading);
