@@ -43,13 +43,14 @@ var displayReadings = function displayReadings() {
 
         case 2:
           readings = _context2.sent;
+          console.log(readings);
           latestFiveReadings = readings.slice(0, 4);
           readingCards = latestFiveReadings.map(function (reading) {
             return createCard(reading);
           });
           return _context2.abrupt("return", readingCards);
 
-        case 6:
+        case 7:
         case "end":
           return _context2.stop();
       }
