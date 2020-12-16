@@ -3,7 +3,7 @@ async function fetchReadings() {
         'https://breads-server.herokuapp.com/api/readings/21', {
         method: 'GET',
         headers: {
-            'Access-Control-Allow-Origin': 'https://jw00ds.github.io/'
+            'Access-Control-Request-Headers': 'authorization'
         }
     })
         .then(results => results.json())
