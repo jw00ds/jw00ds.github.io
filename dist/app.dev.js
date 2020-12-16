@@ -7,7 +7,10 @@ function fetchReadings() {
         case 0:
           _context.next = 2;
           return regeneratorRuntime.awrap(fetch('https://breads-server.herokuapp.com/api/readings/21', {
-            method: 'GET'
+            method: 'GET',
+            headers: {
+              'Access-Control-Request-Headers': 'authorization'
+            }
           }).then(function (results) {
             return results.json();
           })["catch"](function (err) {
