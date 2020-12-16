@@ -1,13 +1,19 @@
 async function fetchReadings() {
-    await fetch(
-        'https://breads-server.herokuapp.com/api/readings/21', {
-        method: 'GET',
-        headers: {
-            'Access-Control-Request-Headers': 'authorization'
-        }
-    })
-        .then(results => results.json())
-        .catch(err => console.log(err, err.status, err.message));
+    try {
+        const response = await fetch(
+            'https://breads-server.herokuapp.com/api/readings/21', {
+            method: 'GET',
+            headers: {
+                'Access-Control-Request-Headers': 'authorization'
+            }
+        });
+        console.log(response);
+        const responseBody = await response.json();
+        console.log(responseBody);
+        return responseBody;
+    } catch (err) {
+        console.log(err, err.message);
+    };
 }
 
 const createCard = reading => {
