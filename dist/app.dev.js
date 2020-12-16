@@ -9,7 +9,7 @@ function fetchReadings() {
           return regeneratorRuntime.awrap(fetch('https://breads-server.herokuapp.com/api/readings/21', {
             method: 'GET',
             headers: {
-              'Access-Control-Request-Headers': 'authorization'
+              'Access-Control-Allow-Origin': 'https://jw00ds.github.io/'
             }
           }).then(function (results) {
             return results.json();
