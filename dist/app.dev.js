@@ -76,7 +76,11 @@ var createCard = function createCard(reading) {
   p2.appendChild(createdAt);
   p1.appendChild(description);
   h2.appendChild(title);
-  div3.appendChild(h2, image, p1, p2, div4);
+  div3.appendChild(h2);
+  div3.appendChild(image);
+  div3.appendChild(p1);
+  div3.appendChild(p2);
+  div3.appendChild(div4);
   div2.appendChild(div3);
   div1.appendChild(div2);
   section.appendChild(div1);
@@ -97,7 +101,7 @@ var displayReadings = function displayReadings() {
 
         case 2:
           readings = _context2.sent;
-          latestFiveReadings = readings.slice(0, 4);
+          latestFiveReadings = readings.slice(0, 5);
           readingCards = latestFiveReadings.map(function (reading) {
             return createCard(reading);
           });
