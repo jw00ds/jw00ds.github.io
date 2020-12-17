@@ -43,8 +43,8 @@ function fetchReadings() {
 var createCard = function createCard(reading) {
   var linkText = document.createTextNode('Link to article');
   var receiverContainer = document.getElementById('breads');
-  var listItem = document.createElement('li');
-  var main = document.createElement('main');
+  var listItem = document.createElement('li'); // const main = document.createElement('main');
+
   var section = document.createElement('section');
   var div1 = document.createElement('div');
   var div2 = document.createElement('div');
@@ -57,8 +57,8 @@ var createCard = function createCard(reading) {
   var link = document.createElement('a');
   var createdAt = document.createTextNode(reading.created_at);
   var description = document.createTextNode(reading.description);
-  var title = document.createTextNode(reading.title);
-  main.setAttribute('class', 'container');
+  var title = document.createTextNode(reading.title); // main.setAttribute('class', 'container');
+
   section.setAttribute('class', 'row justify-content-center mt-3');
   div1.setAttribute('class', 'col-12');
   div2.setAttribute('class', 'card shadow-lg');
@@ -83,9 +83,9 @@ var createCard = function createCard(reading) {
   div3.appendChild(div4);
   div2.appendChild(div3);
   div1.appendChild(div2);
-  section.appendChild(div1);
-  main.appendChild(section);
-  listItem.appendChild(main);
+  section.appendChild(div1); // main.appendChild(section);
+
+  listItem.appendChild(section);
   receiverContainer.appendChild(listItem);
   return receiverContainer;
 };
