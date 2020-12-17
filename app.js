@@ -18,7 +18,7 @@ const createCard = reading => {
     const linkText = document.createTextNode('Link to article');
     const receiverContainer = document.getElementById('breads');
     const listItem = document.createElement('li');
-    const main = document.createElement('main');
+    // const main = document.createElement('main');
     const section = document.createElement('section');
     const div1 = document.createElement('div');
     const div2 = document.createElement('div');
@@ -32,7 +32,7 @@ const createCard = reading => {
     const createdAt = document.createTextNode(reading.created_at);
     const description = document.createTextNode(reading.description);
     const title = document.createTextNode(reading.title);
-    main.setAttribute('class', 'container');
+    // main.setAttribute('class', 'container');
     section.setAttribute('class', 'row justify-content-center mt-3');
     div1.setAttribute('class', 'col-12');
     div2.setAttribute('class', 'card shadow-lg');
@@ -58,8 +58,8 @@ const createCard = reading => {
     div2.appendChild(div3);
     div1.appendChild(div2);
     section.appendChild(div1);
-    main.appendChild(section);
-    listItem.appendChild(main);
+    // main.appendChild(section);
+    listItem.appendChild(section);
     receiverContainer.appendChild(listItem);
     return receiverContainer;
 };
