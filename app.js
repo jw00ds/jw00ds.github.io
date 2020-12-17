@@ -50,7 +50,11 @@ const createCard = reading => {
     p2.appendChild(createdAt);
     p1.appendChild(description);
     h2.appendChild(title);
-    div3.appendChild(h2, image, p1, p2, div4);
+    div3.appendChild(h2);
+    div3.appendChild(image);
+    div3.appendChild(p1);
+    div3.appendChild(p2);
+    div3.appendChild(div4);
     div2.appendChild(div3);
     div1.appendChild(div2);
     section.appendChild(div1);
@@ -62,7 +66,7 @@ const createCard = reading => {
 
 const displayReadings = async () => {
     const readings = await fetchReadings();
-    const latestFiveReadings = readings.slice(0, 4);
+    const latestFiveReadings = readings.slice(0, 5);
     const readingCards = latestFiveReadings.map(reading => {
         return createCard(reading);
     });
