@@ -29,6 +29,9 @@ const createCard = reading => {
     const p2 = document.createElement('p');
     const div4 = document.createElement('div');
     const link = document.createElement('a');
+    const createdAt = document.createTextNode(reading.created_at);
+    const description = document.createTextNode(reading.description);
+    const title = document.createTextNode(reading.title);
     main.setAttribute('class', 'container');
     section.setAttribute('class', 'row justify-content-center mt-3');
     div1.setAttribute('class', 'col-12');
@@ -44,9 +47,9 @@ const createCard = reading => {
     link.setAttribute('href', reading.url);
     link.appendChild(linkText);
     div4.appendChild(link);
-    p2.appendChild(reading.created_at);
-    p1.appendChild(reading.description);
-    h2.appendChild(reading.title);
+    p2.appendChild(createdAt);
+    p1.appendChild(description);
+    h2.appendChild(title);
     div3.appendChild(h2, image, p1, p2, div4);
     div2.appendChild(div3);
     div1.appendChild(div2);
