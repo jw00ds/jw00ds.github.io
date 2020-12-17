@@ -7,9 +7,7 @@ async function fetchReadings() {
                 'Access-Control-Request-Headers': 'authorization'
             }
         });
-        console.log(response);
         const responseBody = await response.json();
-        console.log(response);
         return responseBody;
     } catch (err) {
         console.log(err, err.message);
@@ -31,37 +29,36 @@ const createCard = reading => {
     const p2 = document.createElement('p');
     const div4 = document.createElement('div');
     const link = document.createElement('a');
-    const mainWithAttr = main.setAttribute('class', 'container');
-    const sectionWithAttr = section.setAttribute('class', 'row justify-content-center mt-3');
-    const div1WithAttr = div1.setAttribute('class', 'col-12');
-    const div2WithAttr = div2.setAttribute('class', 'card shadow-lg');
-    const div3WithAttr = div3.setAttribute('class', 'card-body');
-    const h2WithAttr = h2.setAttribute('class', 'card-title');
-    const imageWithAttr1 = image.setAttribute('class', 'thumbnail');
-    const imageWithAttr2 = imageWithAttr1.setAttribute('src', reading.reading_image);
-    const p1WithAttr = p1.setAttribute('class', 'card-text text');
-    const p2WithAttr = p2.setAttribute('class', 'card-text text-muted');
-    const div4WithAttr = div4.setAttribute('class', 'd-flex justify-content-end');
-    const linkWithAttr1 = link.setAttribute('class', 'btn btn-link');
-    const linkWithAttr2 = linkWithAttr1.setAttribute('href', reading.url);
-    const finishedLink = linkWithAttr2.appendChild(linkText);
-    const finishedDiv4 = div4WithAttr.appendChild(finishedLink);
-    const finishedP2 = p2WithAttr.appendChild(reading.created_at);
-    const finishedP1 = p1WithAttr.appendChild(reading.description);
-    const finishedH2 = h2WithAttr.appendChild(reading.title);
-    const finishedDiv3 = div3WithAttr.appendChild(finishedH2, imageWithAttr2, finishedP1, finishedP2, finishedDiv4);
-    const finishedDiv2 = div2WithAttr.appendChild(finishedDiv3);
-    const finishedDiv1 = div1WithAttr.appendChild(finishedDiv2);
-    const finishedSection = sectionWithAttr.appendChild(finishedDiv1);
-    const finishedMain = mainWithAttr.appendChild(finishedSection);
-    const finishedListItem = listItem.appendChild(finishedMain);
-    const finishedReceiverContainer = receiverContainer.appendChild(finishedListItem);
-    return finishedReceiverContainer;
+    main.setAttribute('class', 'container');
+    section.setAttribute('class', 'row justify-content-center mt-3');
+    div1.setAttribute('class', 'col-12');
+    div2.setAttribute('class', 'card shadow-lg');
+    div3.setAttribute('class', 'card-body');
+    h2.setAttribute('class', 'card-title');
+    image.setAttribute('class', 'thumbnail');
+    image.setAttribute('src', reading.reading_image);
+    p1.setAttribute('class', 'card-text text');
+    p2.setAttribute('class', 'card-text text-muted');
+    div4.setAttribute('class', 'd-flex justify-content-end');
+    link.setAttribute('class', 'btn btn-link');
+    link.setAttribute('href', reading.url);
+    link.appendChild(linkText);
+    div4.appendChild(link);
+    p2.appendChild(reading.created_at);
+    p1.appendChild(reading.description);
+    h2.appendChild(reading.title);
+    div3.appendChild(h2, image, p1, p2, div4);
+    div2.appendChild(div3);
+    div1.appendChild(div2);
+    section.appendChild(div1);
+    main.appendChild(section);
+    listItem.appendChild(main);
+    receiverContainer.appendChild(listItem);
+    return receiverContainer;
 };
 
 const displayReadings = async () => {
     const readings = await fetchReadings();
-    console.log(readings);
     const latestFiveReadings = readings.slice(0, 4);
     const readingCards = latestFiveReadings.map(reading => {
         return createCard(reading);

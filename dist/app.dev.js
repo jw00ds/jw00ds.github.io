@@ -17,29 +17,27 @@ function fetchReadings() {
 
         case 3:
           response = _context.sent;
-          console.log(response);
-          _context.next = 7;
+          _context.next = 6;
           return regeneratorRuntime.awrap(response.json());
 
-        case 7:
+        case 6:
           responseBody = _context.sent;
-          console.log(response);
           return _context.abrupt("return", responseBody);
 
-        case 12:
-          _context.prev = 12;
+        case 10:
+          _context.prev = 10;
           _context.t0 = _context["catch"](0);
           console.log(_context.t0, _context.t0.message);
 
-        case 15:
+        case 13:
           ;
 
-        case 16:
+        case 14:
         case "end":
           return _context.stop();
       }
     }
-  }, null, null, [[0, 12]]);
+  }, null, null, [[0, 10]]);
 }
 
 var createCard = function createCard(reading) {
@@ -57,32 +55,32 @@ var createCard = function createCard(reading) {
   var p2 = document.createElement('p');
   var div4 = document.createElement('div');
   var link = document.createElement('a');
-  var mainWithAttr = main.setAttribute('class', 'container');
-  var sectionWithAttr = section.setAttribute('class', 'row justify-content-center mt-3');
-  var div1WithAttr = div1.setAttribute('class', 'col-12');
-  var div2WithAttr = div2.setAttribute('class', 'card shadow-lg');
-  var div3WithAttr = div3.setAttribute('class', 'card-body');
-  var h2WithAttr = h2.setAttribute('class', 'card-title');
-  var imageWithAttr1 = image.setAttribute('class', 'thumbnail');
-  var imageWithAttr2 = imageWithAttr1.setAttribute('src', reading.reading_image);
-  var p1WithAttr = p1.setAttribute('class', 'card-text text');
-  var p2WithAttr = p2.setAttribute('class', 'card-text text-muted');
-  var div4WithAttr = div4.setAttribute('class', 'd-flex justify-content-end');
-  var linkWithAttr1 = link.setAttribute('class', 'btn btn-link');
-  var linkWithAttr2 = linkWithAttr1.setAttribute('href', reading.url);
-  var finishedLink = linkWithAttr2.appendChild(linkText);
-  var finishedDiv4 = div4WithAttr.appendChild(finishedLink);
-  var finishedP2 = p2WithAttr.appendChild(reading.created_at);
-  var finishedP1 = p1WithAttr.appendChild(reading.description);
-  var finishedH2 = h2WithAttr.appendChild(reading.title);
-  var finishedDiv3 = div3WithAttr.appendChild(finishedH2, imageWithAttr2, finishedP1, finishedP2, finishedDiv4);
-  var finishedDiv2 = div2WithAttr.appendChild(finishedDiv3);
-  var finishedDiv1 = div1WithAttr.appendChild(finishedDiv2);
-  var finishedSection = sectionWithAttr.appendChild(finishedDiv1);
-  var finishedMain = mainWithAttr.appendChild(finishedSection);
-  var finishedListItem = listItem.appendChild(finishedMain);
-  var finishedReceiverContainer = receiverContainer.appendChild(finishedListItem);
-  return finishedReceiverContainer;
+  main.setAttribute('class', 'container');
+  section.setAttribute('class', 'row justify-content-center mt-3');
+  div1.setAttribute('class', 'col-12');
+  div2.setAttribute('class', 'card shadow-lg');
+  div3.setAttribute('class', 'card-body');
+  h2.setAttribute('class', 'card-title');
+  image.setAttribute('class', 'thumbnail');
+  image.setAttribute('src', reading.reading_image);
+  p1.setAttribute('class', 'card-text text');
+  p2.setAttribute('class', 'card-text text-muted');
+  div4.setAttribute('class', 'd-flex justify-content-end');
+  link.setAttribute('class', 'btn btn-link');
+  link.setAttribute('href', reading.url);
+  link.appendChild(linkText);
+  div4.appendChild(link);
+  p2.appendChild(reading.created_at);
+  p1.appendChild(reading.description);
+  h2.appendChild(reading.title);
+  div3.appendChild(h2, image, p1, p2, div4);
+  div2.appendChild(div3);
+  div1.appendChild(div2);
+  section.appendChild(div1);
+  main.appendChild(section);
+  listItem.appendChild(main);
+  receiverContainer.appendChild(listItem);
+  return receiverContainer;
 };
 
 var displayReadings = function displayReadings() {
@@ -96,14 +94,13 @@ var displayReadings = function displayReadings() {
 
         case 2:
           readings = _context2.sent;
-          console.log(readings);
           latestFiveReadings = readings.slice(0, 4);
           readingCards = latestFiveReadings.map(function (reading) {
             return createCard(reading);
           });
           return _context2.abrupt("return", readingCards);
 
-        case 7:
+        case 6:
         case "end":
           return _context2.stop();
       }
