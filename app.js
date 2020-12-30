@@ -14,11 +14,12 @@ async function fetchReadings() {
     };
 }
 
-const displayReadings = async () => {
-    const readings = await fetchReadings();
-    const latestFiveReadings = readings.slice(0, 5);
-    const readingCards = latestFiveReadings.map(reading => {
-        `
+window.addEventListener('DOMContentLoaded',
+    async () => {
+        const readings = await fetchReadings();
+        const latestFiveReadings = readings.slice(0, 5);
+        document.getElementById('breads').innerHTML = latestFiveReadings.map(reading => {
+            `
         <main class="container">
             <section class="row justify-content-center mt-3">
                 <div class="col-12">
@@ -50,8 +51,6 @@ const displayReadings = async () => {
             </section>
         </main>
         `;
-    });
-    document.getElementById('breads').innerHTML = readingCards;
-};
-
-window.addEventListener('DOMContentLoaded', displayReadings);
+        });
+    }
+);

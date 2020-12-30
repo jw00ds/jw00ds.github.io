@@ -40,9 +40,9 @@ function fetchReadings() {
   }, null, null, [[0, 10]]);
 }
 
-var displayReadings = function displayReadings() {
-  var readings, latestFiveReadings, readingCards;
-  return regeneratorRuntime.async(function displayReadings$(_context2) {
+window.addEventListener('DOMContentLoaded', function _callee() {
+  var readings, latestFiveReadings;
+  return regeneratorRuntime.async(function _callee$(_context2) {
     while (1) {
       switch (_context2.prev = _context2.next) {
         case 0:
@@ -52,17 +52,14 @@ var displayReadings = function displayReadings() {
         case 2:
           readings = _context2.sent;
           latestFiveReadings = readings.slice(0, 5);
-          readingCards = latestFiveReadings.map(function (reading) {
+          document.getElementById('breads').innerHTML = latestFiveReadings.map(function (reading) {
             "\n        <main class=\"container\">\n            <section class=\"row justify-content-center mt-3\">\n                <div class=\"col-12\">\n                    <div class=\"card shadow-lg\">\n                        <div class=\"card-body\">\n                            <h2 class=\"card-title\">".concat(reading.title, "</h2>\n                            <h3 class=\"card-subtitle mb-2 text-muted\">\n                                Timestamp: ").concat(reading.created_at, "\n                            </h3>\n                            <img\n                                src=").concat(reading.reading_image, "\n                                alt=\"Article img\"\n                                class=\"thumbnail\"\n                            />\n                            <p class=\"card-text\">\n                                ").concat(reading.description.substring(0, 125), "\n                            </p>\n                            <div class=\"d-flex justify-content-end\">\n                                <a\n                                    href=").concat(reading.url, "\n                                    class=\"btn btn-link\"\n                                >\n                                    Link to full article\n                                </a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </section>\n        </main>\n        ");
           });
-          document.getElementById('breads').innerHTML = readingCards;
 
-        case 6:
+        case 5:
         case "end":
           return _context2.stop();
       }
     }
   });
-};
-
-window.addEventListener('DOMContentLoaded', displayReadings);
+});
