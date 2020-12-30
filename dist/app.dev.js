@@ -40,56 +40,6 @@ function fetchReadings() {
   }, null, null, [[0, 10]]);
 }
 
-var createCard = function createCard(reading) {
-  var linkText = document.createTextNode('Link to article');
-  var receiverContainer = document.getElementById('breads');
-  var listItem = document.createElement('li'); // const main = document.createElement('main');
-
-  var section = document.createElement('section');
-  var div1 = document.createElement('div');
-  var div2 = document.createElement('div');
-  var div3 = document.createElement('div');
-  var h2 = document.createElement('h2');
-  var image = document.createElement('img');
-  var p1 = document.createElement('p');
-  var p2 = document.createElement('p');
-  var div4 = document.createElement('div');
-  var link = document.createElement('a');
-  var createdAt = document.createTextNode(reading.created_at);
-  var description = document.createTextNode(reading.description);
-  var title = document.createTextNode(reading.title); // main.setAttribute('class', 'container');
-
-  section.setAttribute('class', 'row justify-content-center mt-3');
-  div1.setAttribute('class', 'col-12');
-  div2.setAttribute('class', 'card shadow-lg');
-  div3.setAttribute('class', 'card-body');
-  h2.setAttribute('class', 'card-title');
-  image.setAttribute('class', 'thumbnail');
-  image.setAttribute('src', reading.reading_image);
-  p1.setAttribute('class', 'card-text text');
-  p2.setAttribute('class', 'card-text text-muted');
-  div4.setAttribute('class', 'd-flex justify-content-end');
-  link.setAttribute('class', 'btn btn-link');
-  link.setAttribute('href', reading.url);
-  link.appendChild(linkText);
-  div4.appendChild(link);
-  p2.appendChild(createdAt);
-  p1.appendChild(description);
-  h2.appendChild(title);
-  div3.appendChild(h2);
-  div3.appendChild(image);
-  div3.appendChild(p1);
-  div3.appendChild(p2);
-  div3.appendChild(div4);
-  div2.appendChild(div3);
-  div1.appendChild(div2);
-  section.appendChild(div1); // main.appendChild(section);
-
-  listItem.appendChild(section);
-  receiverContainer.appendChild(listItem);
-  return receiverContainer;
-};
-
 var displayReadings = function displayReadings() {
   var readings, latestFiveReadings, readingCards;
   return regeneratorRuntime.async(function displayReadings$(_context2) {
@@ -103,9 +53,9 @@ var displayReadings = function displayReadings() {
           readings = _context2.sent;
           latestFiveReadings = readings.slice(0, 5);
           readingCards = latestFiveReadings.map(function (reading) {
-            return createCard(reading);
+            "\n        <main class=\"container\">\n            <section class=\"row justify-content-center mt-3\">\n                <div class=\"col-12\">\n                    <div class=\"card shadow-lg\">\n                        <div class=\"card-body\">\n                            <h2 class=\"card-title\">".concat(reading.title, "</h2>\n                            <h3 class=\"card-subtitle mb-2 text-muted\">\n                                Timestamp: ").concat(reading.created_at, "\n                            </h3>\n                            <img\n                                src=").concat(reading.reading_image, "\n                                alt=\"Article img\"\n                                class=\"thumbnail\"\n                            />\n                            <p class=\"card-text\">\n                                ").concat(reading.description.substring(0, 125), "\n                            </p>\n                            <div class=\"d-flex justify-content-end\">\n                                <a\n                                    href=").concat(reading.url, "\n                                    class=\"btn btn-link\"\n                                >\n                                    Link to full article\n                                </a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </section>\n        </main>\n        ");
           });
-          return _context2.abrupt("return", readingCards);
+          document.getElementById('breads').innerHTML = readingCards;
 
         case 6:
         case "end":
