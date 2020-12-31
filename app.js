@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 async function fetchReadings() {
     try {
         const response = await fetch(
@@ -23,22 +25,23 @@ window.addEventListener('DOMContentLoaded',
                 <main class="container">
                     <section class="row justify-content-center mt-3">
                         <div class="col-12">
-                            <div class="card shadow-lg">
-                                <div class="card-body">
-                                    <h2 class="card-title">${reading.title}</h2>
-                                    <h3 class="card-subtitle mb-2 text-muted">
-                                        Timestamp: ${reading.created_at}
+                            <div id="breads-cards" class="card shadow-lg">
+                                <div id="breads-cards" class="card-body">
+                                    <h2 id="breads-cards" class="card-title">${reading.title}</h2>
+                                    <h3 id="breads-cards" class="card-subtitle mb-2 text-muted">
+                                        Timestamp: ${moment(reading.created_at)}
                                     </h3>
                                     <img
                                         src=${reading.reading_image}
                                         alt="Article img"
                                         class="thumbnail"
                                     />
-                                    <p class="card-text">
-                                        ${reading.description.substring(0, 125)}
+                                    <p id="breads-cards" class="card-text">
+                                        ${reading.description.substring(0, 300)}...
                                     </p>
-                                    <div class="d-flex justify-content-end">
+                                    <div id="breads-cards" class="d-flex justify-content-end">
                                         <a
+                                            id="breads-cards"
                                             href=${reading.url}
                                             class="btn btn-link"
                                         >
