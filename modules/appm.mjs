@@ -16,7 +16,7 @@ async function fetchReadings() {
     };
 }
 
-window.addEventListener('DOMContentLoaded',
+export const eventListener = () => window.addEventListener('DOMContentLoaded',
     async () => {
         const readings = await fetchReadings();
         const latestFiveReadings = readings.slice(0, 5);
@@ -57,4 +57,4 @@ window.addEventListener('DOMContentLoaded',
         }).join('');
         document.getElementById('breads').innerHTML = breadsHtml;
     }
-);
+)();
