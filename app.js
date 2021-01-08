@@ -1,4 +1,4 @@
-import moment from 'moment';
+// import moment from 'moment';
 
 async function fetchReadings() {
     try {
@@ -21,6 +21,10 @@ export const eventListener = () => window.addEventListener('DOMContentLoaded',
         const readings = await fetchReadings();
         const latestFiveReadings = readings.slice(0, 5);
         let breadsHtml = latestFiveReadings.map(reading => {
+            const d = new Date(reading.created_at);
+            const yr = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+            const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d);
+            const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
             return `
                 <main class="container">
                     <section class="row justify-content-center mt-3">
@@ -29,7 +33,7 @@ export const eventListener = () => window.addEventListener('DOMContentLoaded',
                                 <div id="breads-cards" class="card-body">
                                     <h2 id="breads-cards" class="card-title">${reading.title}</h2>
                                     <h3 id="breads-cards" class="card-subtitle mb-2 text-muted">
-                                        Timestamp: ${moment(reading.created_at)}
+                                        Timestamp: ${day}-${mo}-${yr}
                                     </h3>
                                     <img
                                         src=${reading.reading_image}
